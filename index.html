@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ibrahim W Elgmmal - AI & Automation Engineer Portfolio">
+    <meta name="keywords" content="AI Engineer, Automation, Web Development, Machine Learning">
+    <meta name="author" content="Ibrahim W Elgmmal">
+    <title>Ibrahim W Elgmmal - AI & Automation Engineer</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span id="nav-name">Ibrahim W Elgmmal</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+
+                <a href="#projects" class="nav-link">Projects</a>
+
+                <a href="#contact" class="nav-link">Contact</a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="profile-image-container">
+                    <div class="profile-wrapper">
+                        <img id="profile-image" src="" alt="Ibrahim W Elgmmal - AI & Automation Engineer" class="profile-image">
+                    </div>
+                </div>
+                <h1 id="hero-name" class="hero-name"></h1>
+                <h2 id="hero-title" class="hero-title"></h2>
+                <p id="hero-bio" class="hero-bio"></p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                </div>
+                <div class="social-links" id="social-links">
+                    <!-- Social links will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="project-filters" id="project-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="ai">AI & ML</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="automation">Automation</button>
+            </div>
+            <div class="projects-grid" id="projects-grid">
+                <!-- Projects will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-intro">
+                <p>I'm always interested in new opportunities and exciting projects. Let's create something amazing together!</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-illustration">
+                    <div class="contact-avatar">
+                        <div class="avatar-circle">
+                            <i class="fas fa-envelope-open-text"></i>
+                        </div>
+                        <div class="avatar-decoration"></div>
+                    </div>
+                </div>
+                <div class="contact-form-card">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <div class="input-wrapper">
+                                <i class="fas fa-user input-icon"></i>
+                                <input type="text" id="name" name="name" placeholder="What's your name?" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-wrapper">
+                                <i class="fas fa-envelope input-icon"></i>
+                                <input type="email" id="email" name="email" placeholder="How can I reach you?" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-wrapper">
+                                <i class="fas fa-tag input-icon"></i>
+                                <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-wrapper">
+                                <i class="fas fa-comment-dots input-icon"></i>
+                                <textarea id="message" name="message" rows="4" placeholder="Tell me about your project or idea..." required></textarea>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Message
+                            </button>
+                            <button type="button" class="btn btn-secondary connect-btn" id="connect-btn">
+                                <i class="fas fa-share-alt"></i>
+                                Connect with me
+                            </button>
+                        </div>
+                    </form>
+                    <div class="form-success-message" id="form-success-message">
+                        <div class="success-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>Thanks! I'll get back to you soon.</h3>
+                        <p>Your message has been sent successfully. I typically respond within 24 hours.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Connect Modal -->
+        <div class="connect-modal" id="connect-modal">
+            <div class="modal-overlay" id="modal-overlay"></div>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Let's Connect!</h3>
+                    <button class="modal-close" id="modal-close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Choose your preferred way to connect with me:</p>
+                    <div class="connect-options" id="connect-options">
+                        <!-- Social links will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 <span id="footer-name"></span>. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading-screen">
+        <div class="loader"></div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
